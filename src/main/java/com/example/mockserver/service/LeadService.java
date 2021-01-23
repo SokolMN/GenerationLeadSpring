@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+/**
+ * трололо
+ */
 public class LeadService implements ILeadService {
 
     @Autowired
