@@ -46,11 +46,11 @@ public class StatusService implements IStatusService {
         flagOK = flag;
     }
 
-/*    @Override
-    public Status findByProductOrderId(String productOrderId) {
+    @Override
+    public Status getByProductOrderId(String productOrderId) {
         Status status = statusRepository.findByProductOrderId(productOrderId);
         return status;
-    }*/
+    }
 
     @Override
     public ArrayList<Status> readPart(int resentRqustNumber) {

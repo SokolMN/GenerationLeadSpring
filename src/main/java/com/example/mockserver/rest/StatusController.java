@@ -41,14 +41,14 @@ public class StatusController {
         return new ResponseEntity<>(status, HttpStatus.OK);
     }
 
-/*    @GetMapping(value = "/requests/productOrderId/{productOrderId}")
+    @GetMapping(value = "/requests/productOrderId/{productOrderId}")
     public ResponseEntity<Status> read(@PathVariable(name = "productOrderId") String productOrderId) {
-        Status status = statusService.findByProductOrderId(productOrderId);
+        Status status = statusService.getByProductOrderId(productOrderId);
 
         return status != null
                 ? new ResponseEntity<>(status, HttpStatus.OK)
                 : new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    }*/
+    }
 
     @GetMapping(value = "/requests/{id}")
     public ResponseEntity<List<Status>> readPart(@PathVariable(name = "id") int id) {

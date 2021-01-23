@@ -35,7 +35,7 @@ public interface IStatusService {
      * @return - запрос с заданным productOrderId
      */
 
-//    Status findByProductOrderId(String productOrderId);
+    Status getByProductOrderId(String productOrderId);
 
     /**
      * Возвращает X список запросов
