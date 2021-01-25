@@ -44,6 +44,45 @@ public class Lead {
 
     private String leadId;
 
+    private String taskServiceId;
+
+    private String interectionType;
+
+    //TODO: изменить тип данных, комментарий может не влезть
+    private String comment;
+
+    private String sourceManagerEmail;
+
+    private String sourceManagerPhoneNumber;
+
+    private String sourceManagerPhoneNumber2;
+
+    private String sourceManagerName;
+
+    private String sourceManagerLogin;
+
+    private String sourceManagerTabel;
+
+    private String assisstantPhoneNumber;
+
+    private String assistantName;
+
+    private String contactId;
+
+    private String actionId;
+
+    /*private String serviceManagerEmail;
+
+    private String serviceManagerPhoneNumber;
+
+    private String serviceManagerPhoneNumber2;
+
+    private String serviceManagerName;
+
+    private String serviceManagerLogin;
+
+    private String serviceManagerTabel;*/
+
     public Long getId() {
         return id;
     }
@@ -186,6 +225,111 @@ public class Lead {
 
     public void setLeadId(String leadId) {
         this.leadId = leadId;
+    }
+
+    public String getTaskServiceId() {
+        return taskServiceId;
+    }
+
+    public void setTaskServiceId(String taskServiceId) {
+        this.taskServiceId = taskServiceId;
+    }
+
+    public String getInterectionType() {
+        return interectionType;
+    }
+
+    public void setInterectionType(String interectionType) {
+        this.interectionType = interectionType;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public String getSourceManagerEmail() {
+        return sourceManagerEmail;
+    }
+
+    public void setSourceManagerEmail(String sourceManagerEmail) {
+        this.sourceManagerEmail = sourceManagerEmail;
+    }
+
+    public String getSourceManagerPhoneNumber() {
+        return sourceManagerPhoneNumber;
+    }
+
+    public void setSourceManagerPhoneNumber(String sourceManagerPhoneNumber) {
+        this.sourceManagerPhoneNumber = sourceManagerPhoneNumber;
+    }
+
+    public String getSourceManagerPhoneNumber2() {
+        return sourceManagerPhoneNumber2;
+    }
+
+    public void setSourceManagerPhoneNumber2(String sourceManagerPhoneNumber2) {
+        this.sourceManagerPhoneNumber2 = sourceManagerPhoneNumber2;
+    }
+
+    public String getSourceManagerName() {
+        return sourceManagerName;
+    }
+
+    public void setSourceManagerName(String sourceManagerName) {
+        this.sourceManagerName = sourceManagerName;
+    }
+
+    public String getSourceManagerLogin() {
+        return sourceManagerLogin;
+    }
+
+    public void setSourceManagerLogin(String sourceManagerLogin) {
+        this.sourceManagerLogin = sourceManagerLogin;
+    }
+
+    public String getSourceManagerTabel() {
+        return sourceManagerTabel;
+    }
+
+    public void setSourceManagerTabel(String sourceManagerTabel) {
+        this.sourceManagerTabel = sourceManagerTabel;
+    }
+
+    public String getAssisstantPhoneNumber() {
+        return assisstantPhoneNumber;
+    }
+
+    public void setAssisstantPhoneNumber(String assisstantPhoneNumber) {
+        this.assisstantPhoneNumber = assisstantPhoneNumber;
+    }
+
+    public String getAssistantName() {
+        return assistantName;
+    }
+
+    public void setAssistantName(String assistantName) {
+        this.assistantName = assistantName;
+    }
+
+    public String getContactId() {
+        return contactId;
+    }
+
+    public void setContactId(String contactId) {
+        this.contactId = contactId;
+    }
+
+
+    public String getActionId() {
+        return actionId;
+    }
+
+    public void setActionId(String actionId) {
+        this.actionId = actionId;
     }
 
 }

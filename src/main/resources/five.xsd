@@ -1,0 +1,17 @@
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.siebel.com/xml/SUBOCreateAction_Output" xmlns:xsdLocal4="http://www.siebel.com/xml/SUBOCreateAction_Output" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+    </xsd:annotation>
+    <xsd:element name="Response" type="xsdLocal4:Response"/>
+    <xsd:complexType name="ResponseTopElmt">
+        <xsd:sequence>
+            <xsd:element name="Response" maxOccurs="1" minOccurs="1" type="xsdLocal4:Response"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Response">
+        <xsd:sequence>
+            <xsd:element name="SUBOLeadId" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="ActionId" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

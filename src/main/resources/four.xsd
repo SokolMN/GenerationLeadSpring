@@ -1,0 +1,41 @@
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://siebel.com/asi3/" xmlns:xsdLocal2="http://siebel.com/asi3/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+    </xsd:annotation>
+    <xsd:element name="Request" type="xsdLocal2:Request"/>
+    <xsd:complexType name="RequestTopElmt">
+        <xsd:sequence>
+            <xsd:element name="Request" maxOccurs="1" minOccurs="1" type="xsdLocal2:Request"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Request">
+        <xsd:sequence>
+            <xsd:element name="FLEmail" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLBirthday" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLMiddleName" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLFirstName" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="FLLastName" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="ServiceOfficeId" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="Comment" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="InteractionType" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="SourceManagerTabel" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="SourceManagerEmail" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="SourceOfficeId" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="SourceManagerPhone1" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="SourceManagerPhone2" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="SourceManagerName" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="AssisstantPhoneNumber" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="AssistantName" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="OrganizationName" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="INN" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="FLPhoneNumber2" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLPhoneNumber" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="Source" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="Segment" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="LeadId" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLPosition" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="SUBOLeadId" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="ContactId" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

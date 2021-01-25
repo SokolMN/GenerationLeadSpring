@@ -1,0 +1,22 @@
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsdLocal1="http://siebel.com/asi4/" targetNamespace="http://siebel.com/asi4/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+    </xsd:annotation>
+    <xsd:element name="HeaderInfo" type="xsdLocal1:HeaderInfo"/>
+    <xsd:complexType name="HeaderInfoTopElmt">
+        <xsd:sequence>
+            <xsd:element name="HeaderInfo" maxOccurs="1" minOccurs="1" type="xsdLocal1:HeaderInfo"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="HeaderInfo">
+        <xsd:attribute name="RqUID" type="xsd:string"/>
+        <xsd:attribute name="RqType" type="xsd:string"/>
+        <xsd:attribute name="RqTm" type="xsd:string"/>
+        <xsd:attribute name="SystemFrom" type="xsd:string"/>
+        <xsd:attribute name="SystemTo" type="xsd:string"/>
+        <xsd:attribute name="ContextUserInfo" type="xsd:string"/>
+        <xsd:attribute name="ContextId" type="xsd:string"/>
+        <xsd:attribute name="IPAddress" type="xsd:string"/>
+        <xsd:attribute name="SessionId" type="xsd:string"/>
+    </xsd:complexType>
+</xsd:schema>

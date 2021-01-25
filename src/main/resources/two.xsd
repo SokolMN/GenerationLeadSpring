@@ -1,0 +1,22 @@
+<xsd:schema elementFormDefault="qualified" xmlns:xsdLocal1="http://siebel.com/asi4/" xmlns:xsdLocal3="http://www.siebel.com/xml/HeaderInfoRs2" xmlns:xsdLocal2="http://siebel.com/asi3/" xmlns:xsdLocal4="http://www.siebel.com/xml/SUBOCreateAction_Output" attributeFormDefault="unqualified" targetNamespace="http://siebel.com/CustomUI" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.siebel.com/xml/SUBOCreateAction_Output"/>
+    <xsd:import namespace="http://www.siebel.com/xml/HeaderInfoRs2"/>
+    <xsd:import namespace="http://siebel.com/asi3/"/>
+    <xsd:import namespace="http://siebel.com/asi4/"/>
+    <xsd:element name="SUBOCreateAction_Input">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="xsdLocal1:HeaderInfo"/>
+                <xsd:element ref="xsdLocal2:Request"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="SUBOCreateAction_Output">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="xsdLocal3:HeaderInfo"/>
+                <xsd:element ref="xsdLocal4:Response"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

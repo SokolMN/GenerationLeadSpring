@@ -3,7 +3,6 @@ package com.example.mockserver.service;
 import com.example.mockserver.model.Status;
 import com.example.mockserver.repository.StatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -46,7 +45,7 @@ public class StatusService implements IStatusService {
         flagOK = flag;
     }
 
-    @Override
+    //@Override
     public Status getByProductOrderId(String productOrderId) {
         Status status = statusRepository.findByProductOrderId(productOrderId);
         return status;

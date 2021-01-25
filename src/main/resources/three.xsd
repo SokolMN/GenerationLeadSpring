@@ -1,0 +1,21 @@
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://www.siebel.com/xml/HeaderInfoRs2" xmlns:xsdLocal3="http://www.siebel.com/xml/HeaderInfoRs2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:annotation>
+        <xsd:documentation>Copyright (C) 2001-2004 Siebel Systems, Inc. All rights reserved. Siebel XSD Generation</xsd:documentation>
+    </xsd:annotation>
+    <xsd:element name="HeaderInfo" type="xsdLocal3:HeaderInfo"/>
+    <xsd:complexType name="HeaderInfoTopElmt">
+        <xsd:sequence>
+            <xsd:element name="HeaderInfo" maxOccurs="1" minOccurs="1" type="xsdLocal3:HeaderInfo"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="HeaderInfo">
+        <xsd:attribute name="RqUID" type="xsd:string"/>
+        <xsd:attribute name="CorrelationUID" type="xsd:string"/>
+        <xsd:attribute name="RqType" type="xsd:string"/>
+        <xsd:attribute name="RqTm" type="xsd:dateTime"/>
+        <xsd:attribute name="SystemFrom" type="xsd:string"/>
+        <xsd:attribute name="SystemTo" type="xsd:string"/>
+        <xsd:attribute name="ErrorCode" type="xsd:string"/>
+        <xsd:attribute name="ErrorText" type="xsd:string"/>
+    </xsd:complexType>
+</xsd:schema>
