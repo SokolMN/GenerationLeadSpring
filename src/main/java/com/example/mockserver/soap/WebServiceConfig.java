@@ -33,8 +33,23 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return wsdl11Definition;
     }
 
+    @Bean(name = "tasks")
+    public DefaultWsdl11Definition defaultWsdl11Definition1(XsdSchema tasksSchema) {
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("TasksPort");
+        wsdl11Definition.setLocationUri("/ws");
+        wsdl11Definition.setTargetNamespace("http://siebel.com/CustomUI");
+        wsdl11Definition.setSchema(tasksSchema);
+        return wsdl11Definition;
+    }
+
     @Bean
     public XsdSchema leadsSchema() {
         return new SimpleXsdSchema(new ClassPathResource("xsd/five.xsd"));
+    }
+
+    @Bean
+    public XsdSchema tasksSchema() {
+        return new SimpleXsdSchema(new ClassPathResource("four.xsd"));
     }
 }

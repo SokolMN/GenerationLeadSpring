@@ -15,7 +15,7 @@ public class StatusService implements IStatusService {
     public static String flagOK = "true";
 
     @Autowired
-    StatusRepository statusRepository;
+    private StatusRepository statusRepository;
 
     @Override
     public void save(Status status) {

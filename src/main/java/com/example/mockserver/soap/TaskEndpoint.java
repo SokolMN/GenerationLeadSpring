@@ -28,35 +28,39 @@ public class TaskEndpoint {
     private static final String NAMESPACE_URI = "http://siebel.com/CustomUI";
 
     @Autowired
-    ILeadService leadService;
+    private ILeadService leadService;
 
-    public LeadRepository leadRepository;
+    private LeadRepository leadRepository;
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "SUBOCreateAction_Input")
     @ResponsePayload
-    public SUBOCreateActionOutput getTask(@RequestPayload SUBOCreateActionInput request) throws IOException {
+    private SUBOCreateActionOutput getTask(@RequestPayload SUBOCreateActionInput request) throws IOException {
         Request rqst = request.getRequest();
         String taskId;
-        if(presetTaskId == null)
+        if(presetTaskId == null) {
             taskId = "1-" + randomCharUpperSequence(6);
-        else
+        }
+        else {
             taskId = presetTaskId;
+        }
         presetTaskId = null;
-        //upsertLead(rqst, taskId);
+        Lead lead = leadService.findLeadByLeadId(rqst.getLeadId());
+        Long leadId = selectId(lead);
+        upsertLead(rqst, leadId, taskId);
         HashMap<String, String> errorCode = getErrorCode(rqst);
         SUBOCreateActionOutput response = createResponse(errorCode, taskId);
         return response;
     }
 
-    public Lead selectLead(String leadId){
-        return leadService.findByLeadId(leadId);
+    private Lead selectLead(String leadId){
+        return leadService.findLeadByLeadId(leadId);
     }
 
-    public Long selectId(String leadId){
-        return leadService.findIdByLeadId(leadId);
+    private Long selectId(Lead lead){
+        return lead.getId();
     }
 
-    public Lead mappingRequest(Request rqst, String taskId){
+/*    private Lead mappingRequest(Request rqst, String taskId){
         Lead lead = selectLead(rqst.getLeadId());
         lead.setComment(rqst.getComment());
         lead.setInterectionType(rqst.getInteractionType());
@@ -70,17 +74,17 @@ public class TaskEndpoint {
         lead.setContactId(rqst.getContactId());
         lead.setActionId(taskId);
         return lead;
-    }
+    }*/
 
-    public void upsertLead(Request rqst, String taskId){
-/*        leadRepository.upsertLead(selectId(rqst.getLeadId()), rqst.getComment(), rqst.getInteractionType(),
+    private void upsertLead(Request rqst, Long leadId, String taskId){
+        leadService.upsertLead(leadId, rqst.getComment(), rqst.getInteractionType(),
                 rqst.getSourceManagerTabel(), rqst.getSourceManagerEmail(), rqst.getSourceManagerPhone1(),
                 rqst.getSourceManagerPhone2(), rqst.getSourceManagerName(), rqst.getAssisstantPhoneNumber(),
-                rqst.getAssistantName(), rqst.getContactId(), taskId);*/
+                rqst.getAssistantName(), rqst.getContactId(), taskId);
     }
 
     //TODO: дописать все поля
-    public HashMap<String, String> getErrorCode(Request request){
+    private HashMap<String, String> getErrorCode(Request request){
         HashMap<String, String> errorCode = new HashMap<>();
         errorCode.put("00", "Операция выполнена успешно");
 
@@ -97,7 +101,7 @@ public class TaskEndpoint {
         return errorCode;
     }
 
-    public SUBOCreateActionOutput createResponse(HashMap<String, String> errorCode, String taskId){
+    private SUBOCreateActionOutput createResponse(HashMap<String, String> errorCode, String taskId){
         HeaderInfo headerInfo = new HeaderInfo();
         headerInfo.setRqUID(String.valueOf(randomFromTo(3, 1555)));
 

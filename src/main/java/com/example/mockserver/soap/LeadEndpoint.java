@@ -29,23 +29,25 @@ public class LeadEndpoint {
     private static final String NAMESPACE_URI = "http://siebel.com/CustomUI";
 
     @Autowired
-    ILeadService leadService;
+    private ILeadService leadService;
 
-    public LeadRepository leadRepository;
+    private LeadRepository leadRepository;
 
-    public LeadEndpoint(LeadRepository leadRepository) {
+    private LeadEndpoint(LeadRepository leadRepository) {
         this.leadRepository = leadRepository;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "VTB_spcFindOrCreateLead_Input")
     @ResponsePayload
-    public VTBSpcFindOrCreateLeadOutput getLead(@RequestPayload VTBSpcFindOrCreateLeadInput request) throws IOException {
+    private VTBSpcFindOrCreateLeadOutput getLead(@RequestPayload VTBSpcFindOrCreateLeadInput request) throws IOException {
         Request rqst = request.getRequest();
         String leadID;
-        if (presetLeadId == null)
+        if (presetLeadId == null) {
             leadID = "1-" + randomCharUpperSequence(6);
-        else
+        }
+        else{
             leadID = presetLeadId;
+        }
         presetLeadId = null;
         Lead lead = mappingRequest(rqst, leadID);
         insert(lead);
@@ -55,7 +57,7 @@ public class LeadEndpoint {
         return response;
     }
 
-    public Lead mappingRequest(Request rqst, String leadId){
+    private Lead mappingRequest(Request rqst, String leadId){
         Lead lead = new Lead();
         lead.setServiceOfficeId(rqst.getServiceOfficeId());
         lead.setSegment(rqst.getSegment());
@@ -76,11 +78,11 @@ public class LeadEndpoint {
         return lead;
     }
 
-    public void insert(Lead lead){
+    private void insert(Lead lead){
         leadService.save(lead);
     }
 
-    public VTBSpcFindOrCreateLeadOutput createResponse(HashMap<String, String> errorCode, String leadId){
+    private VTBSpcFindOrCreateLeadOutput createResponse(HashMap<String, String> errorCode, String leadId){
         com.siebel.asi3.Lead lead = new com.siebel.asi3.Lead();
         lead.setLeadId(leadId);
         com.siebel.xml.headerinfors.HeaderInfo headerInfo = new com.siebel.xml.headerinfors.HeaderInfo();
@@ -98,7 +100,7 @@ public class LeadEndpoint {
         return vtbSpcFindOrCreateLeadOutput;
     }
 
-    public HashMap<String, String> getErrorCode(Request request){
+    private HashMap<String, String> getErrorCode(Request request){
         HashMap<String, String> errorCode = new HashMap<>();
         errorCode.put("00", "Операция выполнена успешно");
 

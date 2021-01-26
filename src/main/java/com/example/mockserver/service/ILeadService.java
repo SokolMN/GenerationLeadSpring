@@ -29,14 +29,12 @@ public interface ILeadService {
      * @param leadId - идентификатор лида
      * @return - лид
      */
-    Lead findByLeadId(String leadId);
+    Lead findLeadByLeadId(String leadId);
 
-    /**
-     * Поиск идентификатора лида по leadId
-     * @param leadId - идентификатор лида
-     * @return - идентификатор лида
-     */
-    Long findIdByLeadId(String leadId);
+    void upsertLead(Long id, String comment, String interectionType, String sourceManagerTabel,
+                    String sourceManagerEmail, String sourceManagerPhoneNumber, String sourceManagerPhoneNumber2,
+                    String sourceManagerName, String assisstantPhoneNumber, String assistantName, String contactId,
+                    String actionId);
 
 
 

@@ -16,7 +16,7 @@ import java.util.List;
 public class StatusController {
 
     @Autowired
-    IStatusService statusService;
+    private IStatusService statusService;
 
     @PostMapping(value = "/sendStatus")
     public ResponseEntity<?> create(@RequestBody Status status) {

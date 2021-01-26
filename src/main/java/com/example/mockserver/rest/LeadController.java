@@ -17,33 +17,12 @@ import java.time.LocalDateTime;
 public class LeadController {
 
     @Autowired
-    ILeadService leadService;
+    private ILeadService leadService;
 
     @PostMapping(value = "setLeadId")
-    public ResponseEntity<?> setLeadId(@RequestBody Lead lead){
+    public ResponseEntity<Lead> setLeadId(@RequestBody Lead lead){
         leadService.update(lead.getLeadId());
         return new ResponseEntity<>(lead, HttpStatus.OK);
-    }
-
-    @GetMapping("/dao")
-    public ResponseEntity<Lead> test() {
-        Lead lead = new Lead();
-        lead.setName("123");
-        lead.setMiddlename("");
-        lead.setSurname("");
-        lead.setEmail("");
-        lead.setDate(Timestamp.valueOf(LocalDateTime.now()));
-        lead.setInn("123456789");
-        lead.setNeedCreatedFlag("Y");
-        lead.setOrganizationName("Рога и копыта");
-        lead.setPhoneNumber("79145678963");
-        lead.setPhoneNumber2("79145678950");
-        lead.setPosition("Самый главный дятел на районе");
-        lead.setSegment("Привилегия");
-        lead.setServiceOfficeId("858585");
-        lead = leadService.save(lead);
-        Lead lead2 = leadService.findById(lead.getId());
-        return new ResponseEntity<>(lead2, HttpStatus.OK);
     }
 
     @GetMapping(value = "/lastLeadRequest")

@@ -18,7 +18,7 @@ public class LeadService implements ILeadService {
     public static String presetTaskId;
 
     @Autowired
-    LeadRepository leadRepository;
+    private LeadRepository leadRepository;
 
     @Override
     public Lead save(Lead lead) {
@@ -44,15 +44,18 @@ public class LeadService implements ILeadService {
     }
 
     @Override
-    public Lead findByLeadId(String leadId) {
+    public Lead findLeadByLeadId(String leadId) {
         Lead lead = leadRepository.findByLeadId(leadId);
         return lead;
     }
 
     @Override
-    public Long findIdByLeadId(String leadId) {
-        Long id = leadRepository.findIdByLeadId(leadId);
-        return id;
+    public void upsertLead(Long id, String comment, String interectionType, String sourceManagerTabel,
+                           String sourceManagerEmail, String sourceManagerPhoneNumber, String sourceManagerPhoneNumber2,
+                           String sourceManagerName, String assisstantPhoneNumber, String assistantName, String contactId,
+                           String actionId) {
+        leadRepository.upsertLead(id, comment, interectionType, sourceManagerTabel, sourceManagerEmail, sourceManagerPhoneNumber,
+                sourceManagerPhoneNumber2, sourceManagerName, assisstantPhoneNumber, assistantName, contactId, actionId);
     }
 
     public void setTaskId(String productOrderId) {
