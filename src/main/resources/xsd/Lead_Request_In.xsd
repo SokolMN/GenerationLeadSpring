@@ -24,6 +24,26 @@
             <xsd:element name="OrganizationName" maxOccurs="1" minOccurs="0" type="xsd:string"/>
             <xsd:element name="INN" maxOccurs="1" minOccurs="0" type="xsd:string"/>
             <xsd:element name="Position" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLEmail" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLBirthday" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLMiddleName" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLFirstName" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="FLLastName" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="Comment" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="InteractionType" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="SourceManagerTabel" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="SourceManagerEmail" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="SourceManagerPhone1" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="SourceManagerPhone2" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="SourceManagerName" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="AssisstantPhoneNumber" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="AssistantName" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLPhoneNumber2" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLPhoneNumber" maxOccurs="1" minOccurs="1" type="xsd:string"/>
+            <xsd:element name="LeadId" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+            <xsd:element name="FLPosition" maxOccurs="1" minOccurs="0" type="xsd:string"/>
+           <!-- <xsd:element name="SUBOLeadId" maxOccurs="1" minOccurs="1" type="xsd:string"/>-->
+            <xsd:element name="ContactId" maxOccurs="1" minOccurs="0" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
     <!--<xsd:element name="Lead"></xsd:element>-->

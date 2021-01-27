@@ -3,10 +3,11 @@ package com.example.mockserver.soap;
 import com.example.mockserver.model.Lead;
 import com.example.mockserver.repository.LeadRepository;
 import com.example.mockserver.service.ILeadService;
-import com.siebel.asi3.Request;
+import com.siebel.asi2.Request;
 import com.siebel.customui.SUBOCreateActionInput;
 import com.siebel.customui.SUBOCreateActionOutput;
-import com.siebel.xml.headerinfors2.HeaderInfo;
+import com.siebel.xml.headerinfors.HeaderInfo;
+
 import com.siebel.xml.subocreateaction_output.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;

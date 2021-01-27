@@ -45,11 +45,11 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 
     @Bean
     public XsdSchema leadsSchema() {
-        return new SimpleXsdSchema(new ClassPathResource("xsd/five.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("xsd/Lead_Request_In.xsd"));
     }
 
     @Bean
     public XsdSchema tasksSchema() {
-        return new SimpleXsdSchema(new ClassPathResource("four.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("xsd/Lead_Request_In.xsd"));
     }
 }

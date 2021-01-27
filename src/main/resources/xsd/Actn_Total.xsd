@@ -1,8 +1,8 @@
-<xsd:schema elementFormDefault="qualified" xmlns:xsdLocal1="http://siebel.com/asi4/" xmlns:xsdLocal3="http://www.siebel.com/xml/HeaderInfoRs2" xmlns:xsdLocal2="http://siebel.com/asi3/" xmlns:xsdLocal4="http://www.siebel.com/xml/SUBOCreateAction_Output" attributeFormDefault="unqualified" targetNamespace="http://siebel.com/CustomUI" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema elementFormDefault="qualified" xmlns:xsdLocal1="http://siebel.com/asi/" xmlns:xsdLocal2="http://siebel.com/asi2/" xmlns:xsdLocal3="http://www.siebel.com/xml/HeaderInfoRs" xmlns:xsdLocal4="http://www.siebel.com/xml/SUBOCreateAction_Output" attributeFormDefault="unqualified" targetNamespace="http://siebel.com/CustomUI" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <xsd:import namespace="http://www.siebel.com/xml/SUBOCreateAction_Output"/>
-    <xsd:import namespace="http://www.siebel.com/xml/HeaderInfoRs2"/>
-    <xsd:import namespace="http://siebel.com/asi3/"/>
-    <xsd:import namespace="http://siebel.com/asi4/"/>
+    <xsd:import namespace="http://www.siebel.com/xml/HeaderInfoRs" schemaLocation="Lead_HeadreInfo_out.xsd"/>
+    <xsd:import namespace="http://siebel.com/asi2/" schemaLocation="Lead_Request_In.xsd"/>
+    <xsd:import namespace="http://siebel.com/asi/" schemaLocation="Lead_HeaderInfo_In.xsd"/>
     <xsd:element name="SUBOCreateAction_Input">
         <xsd:complexType>
             <xsd:sequence>

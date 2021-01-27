@@ -66,16 +66,13 @@
                 </executions>
                 <configuration>
                     <sources>
-                        <source>${project.basedir}/src/main/resources/xsd/one.xsd</source>
-                        <source>${project.basedir}/src/main/resources/xsd/two.xsd</source>
-                        <source>${project.basedir}/src/main/resources/xsd/three.xsd</source>
-                        <source>${project.basedir}/src/main/resources/xsd/four.xsd</source>
-                        <source>${project.basedir}/src/main/resources/xsd/five.xsd</source>
-                        <source>${project.basedir}/src/main/resources/one.xsd</source>
-                        <source>${project.basedir}/src/main/resources/two.xsd</source>
-                        <source>${project.basedir}/src/main/resources/three.xsd</source>
-                        <source>${project.basedir}/src/main/resources/four.xsd</source>
-                        <source>${project.basedir}/src/main/resources/five.xsd</source>
+                        <source>${project.basedir}/src/main/resources/xsd/Lead_HeaderInfo_In.xsd</source>
+                        <source>${project.basedir}/src/main/resources/xsd/Lead_HeadreInfo_out.xsd</source>
+                        <source>${project.basedir}/src/main/resources/xsd/Lead_Lead_Out.xsd</source>
+                        <source>${project.basedir}/src/main/resources/xsd/Lead_Request_In.xsd</source>
+                        <source>${project.basedir}/src/main/resources/xsd/Lead_Total.xsd</source>
+                        <source>${project.basedir}/src/main/resources/xsd/Actn_Response_Out.xsd</source>
+                        <source>${project.basedir}/src/main/resources/xsd/Actn_Total.xsd</source>
                     </sources>
                 </configuration>
             </plugin>
